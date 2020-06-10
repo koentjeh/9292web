@@ -12,11 +12,11 @@
 
 ## Run Commands
 
-Composer, NPM and Artisan each run their own container. Execute commands from the project root using:
+Composer, NPM and Artisan each run their isolated container and handle commands without having to have these platforms installed on your local computer. Execute commands from the project root using:
 
-- `docker-compose run --rm composer update`
-- `docker-compose run --rm npm install`
-- `docker-compose run --rm artisan migrate` 
+- **REQUIRED** `docker-compose run --rm composer update`
+- **REQUIRED** `docker-compose run --rm npm install`
+- **REQUIRED** `docker-compose run --rm artisan key:generate` 
 
 ## View Project
 
