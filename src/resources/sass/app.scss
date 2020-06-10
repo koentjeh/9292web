@@ -1,1 +1,24 @@
-//
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkolivegreen;
+}
+
+[x-cloak] {
+    display: none;
+}
+
+[type=radio]:checked+label {
+    @apply bg-green-400 text-white;
+    z-index: 1;
+}
