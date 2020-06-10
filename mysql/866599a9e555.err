@@ -1,0 +1,20 @@
+2020-06-10T14:55:25.652076Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2020-06-10T14:55:25.652168Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.20) starting as process 96
+2020-06-10T14:55:25.692191Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2020-06-10T14:55:26.231508Z 1 [Warning] [MY-012579] [InnoDB] fallocate(18, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.242588Z 1 [Warning] [MY-012579] [InnoDB] fallocate(19, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.255481Z 1 [Warning] [MY-012579] [InnoDB] fallocate(20, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.267430Z 1 [Warning] [MY-012579] [InnoDB] fallocate(21, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.278870Z 1 [Warning] [MY-012579] [InnoDB] fallocate(22, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.287269Z 1 [Warning] [MY-012579] [InnoDB] fallocate(23, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.297766Z 1 [Warning] [MY-012579] [InnoDB] fallocate(24, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.309990Z 1 [Warning] [MY-012579] [InnoDB] fallocate(25, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.318729Z 1 [Warning] [MY-012579] [InnoDB] fallocate(26, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.358946Z 1 [Warning] [MY-012579] [InnoDB] fallocate(27, FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, 0, 16384) returned errno: 22
+2020-06-10T14:55:26.385318Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2020-06-10T14:55:26.562593Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock'
+2020-06-10T14:55:26.788850Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2020-06-10T14:55:26.802277Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2020-06-10T14:55:26.851974Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.20'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+2020-06-10T14:55:32.635137Z 14 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.20).
+2020-06-10T14:55:34.863572Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.20)  MySQL Community Server - GPL.
