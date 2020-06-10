@@ -1,9 +1,12 @@
 version: '3'
 
+networks:
+    laravel:
+
 services: 
     nginx:
+        image: nginx:stable-alpine
         container_name: nginx
-        image: nginx:stable-alphine
         ports: 
             - "8080:80"
         volumes:
@@ -16,27 +19,31 @@ services:
             - laravel
 
     mysql:
-        container_name: mysql
         image: mysql:8.0.20
+        container_name: mysql
         restart: unless-stopped
         tty: true
         ports:
             - "3306:3306"
+        volumes: 
+            - ./mysql:/var/lib/mysql
+        env_file:
+            - ./src/.env
         environment:
-            MYSQL_DATABASE: ${DB_DATABASE}
-            MYSQL_USER: ${DB_USERNAME}
-            MYSQL_PASSWORD: ${$DB_PASSWORD}
-            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_DATABASE: $${DB_DATABASE}
+            MYSQL_USER: $${DB_USERNAME}
+            MYSQL_PASSWORD: $${$DB_PASSWORD}
+            MYSQL_PASSWORD: $${DB_PASSWORD}
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql
         networks: 
             - laravel
         
     php:
-        container_name: php
         build:
             context: .
-            dockerfile: dockerfile
+            dockerfile: Dockerfile
+        container_name: php
         volumes: 
             - ./src:/var/www/html
         ports: 
@@ -45,8 +52,8 @@ services:
             - laravel
 
     composer:
-        container_name: composer
         image: composer:latest
+        container_name: composer
         volumes: 
             - ./src:/var/www/html
         working_dir: /var/www/html
@@ -55,19 +62,24 @@ services:
         networks: 
             - laravel
 
+    npm:
+        image: node:latest
+        container_name: npm
+        volumes:
+            - ./src:/var/www/html
+        working_dir: /var/www/html
+        entrypoint: ['npm']
+
     artisan:
-        container_name: artisan
         build: 
             context: .
             dockerfile: Dockerfile
+        container_name: artisan
         volumes: 
             - ./src:/var/www/html
         depends_on: 
             - mysql
         working_dir: /var/www/html
-        entrypoint: ['php', 'var/www/html/artisan']
+        entrypoint: ['php', '/var/www/html/artisan']
         networks: 
             - laravel
-
-networks:
-    laravel:
